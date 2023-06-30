@@ -94,6 +94,13 @@ function exe6() {
   for (let i = 0; i < arrStrNums.length; i++) {
     arrNums.push(arrStrNums[i] * 1);
   }
+  let x = +document.getElementById("input-1st").value;
+  let y = +document.getElementById("input-sec").value;
+  let swapEl = (arr, value1, value2) => {
+    [arr[value1], arr[value2]] = [arr[value2], arr[value1]];
+  };
+  swapEl(arrNums, x, y);
+  document.getElementById("output-exe6").innerHTML = arrNums;
 }
 
 // Exe7: Sắp xếp tăng dần
